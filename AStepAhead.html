@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A Step Ahead Preschool, Defense Colony, Ranchi</title>
+    <meta name="description"
+        content="A warm, safe and joyful preschool in Ranchi. Playgroup • Nursery • LKG • UKG. Admissions open." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="AStepAhead.css" />
+</head>
+
+<body>
+    <!-- Top strip -->
+    <div class="topstrip">
+        <div class="container topstrip__row">
+            <div class="topstrip__left">
+                <span class="dot dot--green"></span>
+                Admissions Open • Ranchi, Jharkhand
+            </div>
+            <div class="topstrip__right">
+                <a href="tel:+919611418633" class="link">Call: +91 96114 18633</a>
+                <span class="sep">|</span>
+                <a href="https://wa.me/919611418633" class="link" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="top">
+        <div class="container header__row">
+            <a class="brand" href="#top" aria-label="Home">
+                <div class="brand__mark" aria-hidden="true">🌈</div>
+                <div class="brand__text">
+                    <div class="brand__name">A Step Ahead Preschool</div>
+                    <div class="brand__sub">Ranchi • Play • Learn • Grow</div>
+                </div>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav__list" id="navList">
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#curriculum">Curriculum</a></li>
+                    <li><a href="#safety">Safety</a></li>
+                    <li><a href="#parents">Parent Speak</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav__cta">
+                        <a class="btn btn--primary" href="#enquiry">Enquire Now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+        <section class="hero">
+
+            <div class="container hero__grid">
+                <div class="hero__copy">
+
+                    <div class="chip">
+                        <span class="chip__icon">✨</span>
+                        A joyful preschool experience in Ranchi
+                    </div>
+
+                    <h1>Happy beginnings for your little one.</h1>
+                    <!-- <p class="lead">
+                        Play-based learning, caring teachers, and a safe, child-friendly campus.
+                        Programs for <b>Playgroup • Nursery • LKG • UKG</b>.
+                    </p> -->
+
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="#enquiry">Get Admission Info</a>
+                        <a class="btn btn--ghost" href="#programs">Explore Programs</a>
+                    </div>
+
+                    <!-- Rotating Image Slider -->
+                    <div class="imgslider" aria-label="School highlights slider">
+                        <div class="imgslider__viewport" id="imgViewport">
+                            <div class="imgslider__track" id="imgTrack"></div>
+                        </div>
+
+                        <button class="imgslider__btn imgslider__btn--prev" id="imgPrev" aria-label="Previous image">‹</button>
+                        <button class="imgslider__btn imgslider__btn--next" id="imgNext" aria-label="Next image">›</button>
+
+                        <div class="imgslider__dots" id="imgDots" aria-label="Slider dots"></div>
+                    </div>
+
+                    <div class="hero__badges">
+                        <div class="mini">
+                            <div class="mini__icon">👩‍🏫</div>
+                            <div>
+                                <div class="mini__title">Small Batches</div>
+                                <div class="mini__sub">Better attention & care</div>
+                            </div>
+                        </div>
+                        <div class="mini">
+                            <div class="mini__icon">🧼</div>
+                            <div>
+                                <div class="mini__title">Clean & Hygienic</div>
+                                <div class="mini__sub">Daily sanitization routine</div>
+                            </div>
+                        </div>
+                        <div class="mini">
+                            <div class="mini__icon">🎨</div>
+                            <div>
+                                <div class="mini__title">Activity Learning</div>
+                                <div class="mini__sub">Art, music, movement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enquiry Card -->
+                <div class="card card--glass" id="enquiry">
+                    <div class="card__header">
+                        <h2 class="card__title">Quick Enquiry</h2>
+                        <p class="card__sub">We’ll call you back within 24 hours.</p>
+                    </div>
+
+                    <form id="enquiryForm" class="form" novalidate>
+                        <div class="form__row">
+                            <label class="label" for="parentName">Parent Name</label>
+                            <input class="input" id="parentName" name="parentName" placeholder="e.g., Ananya Sharma"
+                                required />
+                            <div class="error" data-error-for="parentName"></div>
+                        </div>
+
+                        <div class="form__row">
+                            <label class="label" for="phone">Mobile Number</label>
+                            <input class="input" id="phone" name="phone" placeholder="10-digit number"
+                                inputmode="numeric" required />
+                            <div class="error" data-error-for="phone"></div>
+                        </div>
+
+                        <div class="form__row">
+                            <label class="label" for="program">Program</label>
+                            <select class="input" id="program" name="program" required>
+                                <option value="">Select</option>
+                                <option>Playgroup (2–3 yrs)</option>
+                                <option>Nursery (3–4 yrs)</option>
+                                <option>LKG (4–5 yrs)</option>
+                                <option>UKG (5–6 yrs)</option>
+                            </select>
+                            <div class="error" data-error-for="program"></div>
+                        </div>
+
+                        <div class="form__row">
+                            <label class="label" for="area">Area (Ranchi)</label>
+                            <input class="input" id="area" name="area" placeholder="e.g., Lalpur / Doranda / Harmu" />
+                        </div>
+
+                        <button class="btn btn--primary btn--full" type="submit">
+                            Submit Enquiry
+                        </button>
+
+                        <p class="form__note">
+                            By submitting, you agree to be contacted about admissions.
+                        </p>
+                    </form>
+
+                    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <!-- Background blobs -->
+            <div class="blob blob--1" aria-hidden="true"></div>
+            <div class="blob blob--2" aria-hidden="true"></div>
+        </section>
+
+        <!-- Expertise / Stats -->
+        <section class="section section--tight">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Our Expertise</h2>
+                    <p>Foundational learning, joyful routines, and strong safety practices.</p>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat__icon">🏫</div>
+                        <div class="stat__num" data-count="12">0</div>
+                        <div class="stat__label">Years in Ranchi</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__icon">🧒</div>
+                        <div class="stat__num" data-count="2500">0</div>
+                        <div class="stat__label">Kids nurtured</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__icon">⭐</div>
+                        <div class="stat__num" data-count="4.8">0</div>
+                        <div class="stat__label">Parent rating</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__icon">👩‍🏫</div>
+                        <div class="stat__num" data-count="1">0</div>
+                        <div class="stat__label">Teacher ratio (small batch)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs -->
+        <section class="section" id="programs">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Our Preschool Programs</h2>
+                    <p>Age-appropriate learning with the right balance of fun and structure.</p>
+                </div>
+
+                <div class="cards">
+                    <article class="tile">
+                        <div class="tile__top">
+                            <div class="tile__icon">🧩</div>
+                            <div>
+                                <h3>Playgroup</h3>
+                                <p class="muted">2–3 years</p>
+                            </div>
+                        </div>
+                        <p class="muted">
+                            Discovery, language development, social skills, and playful routines.
+                        </p>
+                        <ul class="ticks">
+                            <li>Sensory play</li>
+                            <li>Rhymes & stories</li>
+                            <li>Fine motor activities</li>
+                        </ul>
+                    </article>
+
+                    <article class="tile">
+                        <div class="tile__top">
+                            <div class="tile__icon">🎨</div>
+                            <div>
+                                <h3>Nursery</h3>
+                                <p class="muted">3–4 years</p>
+                            </div>
+                        </div>
+                        <p class="muted">
+                            Creativity, imagination, early numeracy and literacy through activities.
+                        </p>
+                        <ul class="ticks">
+                            <li>Phonics readiness</li>
+                            <li>Counting & patterns</li>
+                            <li>Art & music</li>
+                        </ul>
+                    </article>
+
+                    <article class="tile">
+                        <div class="tile__top">
+                            <div class="tile__icon">📚</div>
+                            <div>
+                                <h3>LKG</h3>
+                                <p class="muted">4–5 years</p>
+                            </div>
+                        </div>
+                        <p class="muted">
+                            Structured learning with play: reading readiness and confidence building.
+                        </p>
+                        <ul class="ticks">
+                            <li>Phonics foundation</li>
+                            <li>Hands-on math</li>
+                            <li>Show-and-tell</li>
+                        </ul>
+                    </article>
+
+                    <article class="tile">
+                        <div class="tile__top">
+                            <div class="tile__icon">🎓</div>
+                            <div>
+                                <h3>UKG</h3>
+                                <p class="muted">5–6 years</p>
+                            </div>
+                        </div>
+                        <p class="muted">
+                            School readiness: vocabulary, writing practice, attention span and routines.
+                        </p>
+                        <ul class="ticks">
+                            <li>Reading & writing</li>
+                            <li>Problem solving</li>
+                            <li>Primary prep</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum / Fun -->
+        <section class="section section--alt" id="curriculum">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Fun Learning, Every Day</h2>
+                    <p>Activities that spark curiosity and build skills—without pressure.</p>
+                </div>
+
+                <div class="carousel" aria-label="Activities carousel">
+                    <button class="carousel__btn" id="prevSlide" aria-label="Previous">‹</button>
+
+                    <div class="carousel__track" id="carouselTrack">
+                        <div class="slide">
+                            <div class="slide__emoji">🎭</div>
+                            <h3>Theme Days</h3>
+                            <p class="muted">Role play & storytelling to boost confidence and speech.</p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide__emoji">🌿</div>
+                            <h3>Outdoor Play</h3>
+                            <p class="muted">Movement, balance, teamwork and fresh-air routines.</p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide__emoji">🥁</div>
+                            <h3>Music & Movement</h3>
+                            <p class="muted">Rhythm, coordination and joyful classroom energy.</p>
+                        </div>
+                        <div class="slide">
+                            <div class="slide__emoji">🧪</div>
+                            <h3>Discovery Corners</h3>
+                            <p class="muted">Simple experiments and hands-on exploration.</p>
+                        </div>
+                    </div>
+
+                    <button class="carousel__btn" id="nextSlide" aria-label="Next">›</button>
+                </div>
+
+                <div class="center mt-18">
+                    <a class="btn btn--primary" href="#enquiry">Book a Campus Visit</a>
+                    <a class="btn btn--ghost" href="#contact">Get Directions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety -->
+        <section class="section" id="safety">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Safe School Practices</h2>
+                    <p>Clear processes that help children feel secure and parents feel confident.</p>
+                </div>
+
+                <div class="grid">
+                    <div class="feature">
+                        <div class="feature__icon">📹</div>
+                        <h3>CCTV in common areas</h3>
+                        <p class="muted">Monitored campus zones (as applicable).</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">🪪</div>
+                        <h3>Visitor entry process</h3>
+                        <p class="muted">Reception log & controlled access.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">🧯</div>
+                        <h3>Emergency readiness</h3>
+                        <p class="muted">First-aid, contacts and basic drills.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">🧼</div>
+                        <h3>Hygiene routine</h3>
+                        <p class="muted">Daily cleaning and handwash practice.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">🧸</div>
+                        <h3>Child-friendly infra</h3>
+                        <p class="muted">Safe furniture and play materials.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon">👨‍👩‍👧</div>
+                        <h3>Pick-up policy</h3>
+                        <p class="muted">Authorized guardian collection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parent Speak / Testimonials -->
+        <section class="section section--alt" id="parents">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Parent Speak</h2>
+                    <p>What families in Ranchi say about us.</p>
+                </div>
+
+                <div class="testimonials">
+                    <button class="tbtn" id="tPrev" aria-label="Previous testimonial">‹</button>
+
+                    <div class="tcard" id="tCard" role="group" aria-label="Testimonials">
+                        <!-- JS injects testimonial content -->
+                    </div>
+
+                    <button class="tbtn" id="tNext" aria-label="Next testimonial">›</button>
+                </div>
+
+                <div class="dots" id="tDots" aria-label="Testimonial dots"></div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers for admissions and daily routines.</p>
+                </div>
+
+                <div class="accordion" id="accordion">
+                    <div class="acc">
+                        <button class="acc__q" aria-expanded="false">
+                            What age can my child start preschool?
+                            <span class="acc__icon">+</span>
+                        </button>
+                        <div class="acc__a">
+                            Children typically start from 2+ years (Playgroup). We’ll suggest the best-fit program based
+                            on age and readiness.
+                        </div>
+                    </div>
+
+                    <div class="acc">
+                        <button class="acc__q" aria-expanded="false">
+                            What are the school timings?
+                            <span class="acc__icon">+</span>
+                        </button>
+                        <div class="acc__a">
+                            Timings vary by program and batch. Share your preferred slot in the enquiry form and we’ll
+                            confirm available options.
+                        </div>
+                    </div>
+
+                    <div class="acc">
+                        <button class="acc__q" aria-expanded="false">
+                            What safety measures do you follow?
+                            <span class="acc__icon">+</span>
+                        </button>
+                        <div class="acc__a">
+                            We follow visitor control, pick-up policy, hygiene routines, and basic emergency
+                            preparedness (customize this to match your exact setup).
+                        </div>
+                    </div>
+
+                    <div class="acc">
+                        <button class="acc__q" aria-expanded="false">
+                            What documents are required for admission?
+                            <span class="acc__icon">+</span>
+                        </button>
+                        <div class="acc__a">
+                            Usually: age/DOB proof, address proof, and photos. We’ll share the final checklist during
+                            enquiry.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section__head">
+                    <h2>Contact & Visit</h2>
+                    <p>Replace placeholders with your real details.</p>
+                </div>
+
+                <div class="contact">
+                    <div class="contact__card">
+                        <h3>A Step Ahead Preschool, Ranchi</h3>
+                        <p class="muted">Defense Colony, Pandra, Ranchi, Jharkhand — 835222</p>
+
+                        <div class="contact__items">
+                            <a class="contact__item" href="tel:+919611418633">
+                                <span>📞</span> +91 96114 18633
+                            </a>
+                            <a class="contact__item" href="mailto:bishwajit.vikram@gmail.com">
+                                <span>✉️</span> bishwajit.vikram@gmail.com
+                            </a>
+                            <a class="contact__item" href="https://wa.me/919611418633" target="_blank" rel="noopener">
+                                <span>🟢</span> WhatsApp Enquiry
+                            </a>
+                        </div>
+
+                        <div class="contact__actions">
+                            <a class="btn btn--primary" href="#enquiry">Admissions Enquiry</a>
+                            <a class="btn btn--ghost" href="https://maps.app.goo.gl/xjuokxou6UcHVFUb9" target="_blank" rel="noopener noreferrer">Open in Maps</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__map">
+                        <!-- Optional: paste Google Maps embed src -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.7324994093943!2d85.27003481232539!3d23.393281597243405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4de1d2486a407%3A0xaa1ba2ca4bbd4dd2!2s85%2C%20Ratu%20Rd%2C%20Ravi%20Steel%2C%20Chowk%2C%20Ranchi%2C%20Pandra%2C%20Jharkhand%20834005%2C%20India!5e0!3m2!1sen!2sjp!4v1773317835222!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div>
+                <div class="footer__brand">
+                    <span class="footer__mark">🌈</span>
+                    <div>
+                        <div class="footer__name">A Step Ahead Preschool</div>
+                        <div class="footer__sub muted">Ranchi, Jharkhand</div>
+                    </div>
+                </div>
+                <p class="muted small mt-10">
+                    © <span id="year"></span> A Step Ahead Preschool. All rights reserved.
+                </p>
+            </div>
+
+            <div class="footer__links">
+                <a href="#programs">Programs</a>
+                <a href="#safety">Safety</a>
+                <a href="#parents">Parent Speak</a>
+                <a href="#faq">FAQs</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer__cta">
+                <a class="btn btn--primary" href="#enquiry">Enquire Now</a>
+                <a class="btn btn--ghost" href="#top">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top floating button -->
+    <button class="fab" id="fab" aria-label="Back to top">^</button>
+
+    <script src="AStepAhead.js"></script>
+</body>
+
+</html>
