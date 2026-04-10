@@ -32,7 +32,7 @@
     </div>
 
     <!-- Header -->
-    <header class="header" id="top">
+    <header class="header" id="top" style="position:fixed;top:0;left:0;right:0;z-index:40;">
         <div class="container header__row">
             <a class="brand" href="#top" aria-label="Home">
                 <div class="brand__mark" aria-hidden="true">🌈</div>
@@ -63,7 +63,7 @@
     </header>
 
     <!-- Hero -->
-    <main>
+    <main style="padding-top:86px;">
         <section class="hero">
 
             <div class="container hero__grid">
@@ -468,7 +468,6 @@
             <div class="container">
                 <div class="section__head">
                     <h2>Contact & Visit</h2>
-                    <p>Replace placeholders with your real details.</p>
                 </div>
 
                 <div class="contact">
@@ -505,33 +504,9 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer__grid">
-            <div>
-                <div class="footer__brand">
-                    <span class="footer__mark">🌈</span>
-                    <div>
-                        <div class="footer__name">A Step Ahead Preschool</div>
-                        <div class="footer__sub muted">Ranchi, Jharkhand</div>
-                    </div>
-                </div>
-                <p class="muted small mt-10">
-                    © <span id="year"></span> A Step Ahead Preschool. All rights reserved.
-                </p>
-            </div>
-
-            <div class="footer__links">
-                <a href="#programs">Programs</a>
-                <a href="#safety">Safety</a>
-                <a href="#parents">Parent Speak</a>
-                <a href="#faq">FAQs</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-            <div class="footer__cta">
-                <a class="btn btn--primary" href="#enquiry">Enquire Now</a>
-                <a class="btn btn--ghost" href="#top">Back to Top</a>
-            </div>
-        </div>
+        <p class="muted small" style="text-align:center;opacity:.55;margin-top:14px;">
+            © <span id="year"></span> A Step Ahead Preschool. All rights reserved.
+        </p>
     </footer>
 
     <!-- Back to top floating button -->

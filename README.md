@@ -1,7 +1,3 @@
-# static-pre-school-webpage
-A Step Ahead Preschool is a responsive static website designed for a Ranchi-based preschool to showcase programs, safety practices, parent testimonials, and contact details while enabling quick admission enquiries through a simple, mobile-friendly interface.
-
-
 # A Step Ahead Preschool - Static Website
 
 This folder contains a responsive static marketing website for **A Step Ahead Preschool, Ranchi**.
