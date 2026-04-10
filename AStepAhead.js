@@ -226,6 +226,10 @@ function onlyDigits(s) {
   return (s || "").replace(/\D/g, "");
 }
 
+function isValidIndianMobile(phone) {
+  return /^[6-9]\d{9}$/.test(phone);
+}
+
 form?.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -245,8 +249,8 @@ form?.addEventListener("submit", (e) => {
     ok = false;
   }
 
-  if (phone.length !== 10) {
-    setError("phone", "Enter a valid 10-digit mobile number.");
+  if (!isValidIndianMobile(phone)) {
+    setError("phone", "Enter a valid 10-digit mobile number starting with 6-9.");
     ok = false;
   }
 
@@ -262,12 +266,12 @@ form?.addEventListener("submit", (e) => {
   const phoneNumber = "919611418633";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  showToast("Enquiry submitted! Opening WhatsApp…");
+  showToast("Enquiry submitted! Opening WhatsApp in a new tab…");
 
-  // Open in a new tab from the user interaction; if blocked, redirect current tab.
+  // Always open WhatsApp in a new tab.
   const popup = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   if (!popup) {
-    window.location.assign(whatsappUrl);
+    showToast("Please allow popups to open WhatsApp in a new tab.");
   }
 
   form.reset();

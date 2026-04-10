@@ -140,14 +140,14 @@
                         <div class="form__row">
                             <label class="label" for="phone">Mobile Number</label>
                             <input class="input" id="phone" name="phone" placeholder="10-digit number"
-                                inputmode="numeric" required />
+                                inputmode="numeric" maxlength="10" minlength="10" pattern="[6-9][0-9]{9}" required />
                             <div class="error" data-error-for="phone"></div>
                         </div>
 
                         <div class="form__row">
                             <label class="label" for="program">Program</label>
                             <select class="input" id="program" name="program" required>
-                                <option value="">Select</option>
+                                <option value="" disabled selected>Select</option>
                                 <option>Playgroup (2–3 yrs)</option>
                                 <option>Nursery (3–4 yrs)</option>
                                 <option>LKG (4–5 yrs)</option>
@@ -157,7 +157,7 @@
                         </div>
 
                         <div class="form__row">
-                            <label class="label" for="area">Area (Ranchi)</label>
+                            <label class="label" for="area">Area (Locality)</label>
                             <input class="input" id="area" name="area" placeholder="e.g., Lalpur / Doranda / Harmu" />
                         </div>
 
