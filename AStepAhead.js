@@ -257,16 +257,18 @@ form?.addEventListener("submit", (e) => {
 
   if (!ok) return;
 
-  // This is a static page: we simulate submit, then open WhatsApp with prefilled message.
-  const msg = encodeURIComponent(
-    `Hello! I want admission details.\n\nParent: ${parentName}\nPhone: ${phone}\nProgram: ${program}\nArea: ${area || "-"}\nCity: Ranchi`,
-  );
+  const message =
+    `Hello! I want admission details.\n\nParent: ${parentName}\nPhone: ${phone}\nProgram: ${program}\nArea: ${area || "-"}\nCity: Ranchi`;
+  const phoneNumber = "919611418633";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  // Replace number with your school's WhatsApp number
-  const whatsapp = `https://wa.me/91XXXXXXXXXX?text=${msg}`;
+  showToast("Enquiry submitted! Opening WhatsApp…");
 
-  showToast("Enquiry submitted! Redirecting to WhatsApp…");
-  setTimeout(() => window.open(whatsapp, "_blank"), 700);
+  // Open in a new tab from the user interaction; if blocked, redirect current tab.
+  const popup = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  if (!popup) {
+    window.location.assign(whatsappUrl);
+  }
 
   form.reset();
 });
