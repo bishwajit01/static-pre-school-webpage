@@ -286,23 +286,33 @@ let imgTimer = null;
 function canLoadImage(src) {
   return new Promise((resolve) => {
     const img = new Image();
-    img.onload = () => resolve(true);
-    img.onerror = () => resolve(false);
+    const timeoutId = setTimeout(() => resolve(false), 1200);
+    img.onload = () => {
+      clearTimeout(timeoutId);
+      resolve(true);
+    };
+    img.onerror = () => {
+      clearTimeout(timeoutId);
+      resolve(false);
+    };
     img.src = src;
   });
 }
 
 async function discoverSliderImages() {
   const found = [];
-  const exts = ["webp"];
-  const maxScan = 50;
+  const maxScan = 12;
   let missingInARow = 0;
 
   for (let i = 1; i <= maxScan; i += 1) {
     let matchedSrc = "";
 
-    for (const ext of exts) {
-      const candidate = `images/slide${i}.${ext}`;
+    const candidates = [
+      `images/slide${i}.avif`,
+      `images/webp/slide${i}.webp`,
+    ];
+
+    for (const candidate of candidates) {
       // Probe available files because browsers cannot list local folders directly.
       // We rely on a predictable naming pattern: slide1, slide2, slide3, ...
       // eslint-disable-next-line no-await-in-loop
@@ -318,7 +328,7 @@ async function discoverSliderImages() {
       missingInARow = 0;
     } else {
       missingInARow += 1;
-      if (missingInARow >= 3) break;
+      if (missingInARow >= 2) break;
     }
   }
 
@@ -332,7 +342,13 @@ function buildSliderMarkup(imageSources) {
     .map(
       (src, idx) => `
       <div class="imgslide">
-        <img src="${src}" alt="School highlight ${idx + 1}" loading="lazy">
+        <img
+          src="${src}"
+          alt="School highlight ${idx + 1}"
+          loading="${idx === 0 ? "eager" : "lazy"}"
+          fetchpriority="${idx === 0 ? "high" : "low"}"
+          decoding="async"
+        >
       </div>
     `,
     )
