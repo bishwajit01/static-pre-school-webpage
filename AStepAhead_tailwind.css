@@ -10,11 +10,13 @@
   html {
     @apply scroll-smooth;
     overflow-x: hidden;
+    max-width: 100%;
   }
 
   body {
     @apply m-0 text-slate-900;
     overflow-x: hidden;
+    max-width: 100%;
     font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     background:
       radial-gradient(900px 500px at 10% -5%, #ffedd5, transparent 60%),
@@ -129,6 +131,7 @@
 
   .nav__list {
     @apply m-0 flex list-none items-center gap-2 p-0;
+    max-width: 100%;
   }
 
   .nav__list a {
@@ -162,6 +165,7 @@
 
   .hero {
     @apply relative pb-2.5 pt-[34px];
+    overflow: hidden;
     overflow-x: clip;
   }
 
@@ -682,6 +686,7 @@
     .nav__list {
       @apply absolute right-0 top-14 hidden flex-col items-stretch gap-1.5 rounded-[18px] border border-slate-900/10 bg-white/90 p-3 shadow-[0_18px_50px_rgba(2,6,23,.10)];
       width: min(92vw, 360px);
+      max-width: calc(100vw - 28px);
     }
 
     .nav__list.is-open {
