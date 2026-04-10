@@ -9,10 +9,12 @@
 
   html {
     @apply scroll-smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply m-0 text-slate-900;
+    overflow-x: hidden;
     font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     background:
       radial-gradient(900px 500px at 10% -5%, #ffedd5, transparent 60%),
@@ -160,6 +162,7 @@
 
   .hero {
     @apply relative pb-2.5 pt-[34px];
+    overflow-x: clip;
   }
 
   .hero__grid {
@@ -630,7 +633,7 @@
     }
 
     .hero__badges {
-      @apply grid-cols-1;
+      @apply grid-cols-2;
     }
 
     .stats {
@@ -661,6 +664,14 @@
   @media (max-width: 760px) {
     .topstrip__row {
       @apply flex-col items-start;
+    }
+
+    .topstrip__right {
+      @apply flex-wrap;
+    }
+
+    .sep {
+      @apply hidden;
     }
 
     .nav__toggle {
@@ -699,6 +710,147 @@
 
     .imgslider__btn {
       @apply h-10 w-10 rounded-[14px];
+    }
+  }
+
+  @media (max-width: 640px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 0 14px;
+    }
+
+    .header__row {
+      @apply py-2.5;
+    }
+
+    .brand__mark {
+      @apply h-10 w-10;
+    }
+
+    .brand__sub {
+      @apply text-xs leading-tight;
+    }
+
+    .nav__list {
+      left: 0;
+      right: auto;
+      top: 3.25rem;
+      width: calc(100vw - 28px);
+    }
+
+    .hero {
+      @apply pt-5;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.9rem, 8.5vw, 2.35rem);
+      line-height: 1.1;
+    }
+
+    .hero__actions {
+      @apply gap-2.5;
+    }
+
+    .hero__actions .btn {
+      @apply w-full;
+    }
+
+    .hero__badges {
+      @apply grid-cols-1;
+    }
+
+    .chip {
+      @apply text-sm;
+    }
+
+    .card {
+      @apply rounded-2xl;
+    }
+
+    .card__header {
+      @apply px-3.5 pt-3.5;
+    }
+
+    .form {
+      @apply px-3.5 pb-3.5 pt-3;
+    }
+
+    .section {
+      @apply py-8;
+    }
+
+    .section--tight {
+      @apply py-5;
+    }
+
+    .section__head h2 {
+      @apply text-2xl leading-tight;
+    }
+
+    .section__head p {
+      @apply text-[15px];
+    }
+
+    .stats {
+      @apply grid-cols-1;
+    }
+
+    .carousel {
+      @apply grid-cols-1;
+    }
+
+    .carousel__btn {
+      @apply hidden;
+    }
+
+    .testimonials {
+      @apply grid-cols-1;
+    }
+
+    .tbtn {
+      @apply hidden;
+    }
+
+    .contact__actions .btn,
+    .footer__cta .btn {
+      @apply w-full;
+    }
+
+    .footer__cta {
+      @apply w-full;
+    }
+
+    .imgslider__btn {
+      @apply h-9 w-9 text-xl;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .brand__name {
+      @apply text-[0.95rem];
+    }
+
+    .brand__sub {
+      @apply text-[0.72rem];
+    }
+
+    .hero h1 {
+      @apply text-[1.78rem];
+    }
+
+    .mini {
+      @apply p-2.5;
+    }
+
+    .mini__sub {
+      @apply text-xs;
+    }
+
+    .acc__q {
+      @apply px-3.5 py-3;
     }
   }
 }
